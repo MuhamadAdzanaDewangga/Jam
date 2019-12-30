@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="clock">
+		<h2>Waktu Sekarang</h2>
+		<div id="time">
+			<div>
+				<span id="Jam">00</span>
+				<span>Hours</span>
+			</div>
+			<div>
+				<span id="Menit">00</span>
+				<span>Minuts</span>
+			</div>
+			<div>
+				<span id="Detik">00</span>
+				<span>Seconds</span>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+	function clock() {
+		var Jam = document.getElementById('Jam');
+		var Menit = document.getElementById('Menit');
+		var Detik = document.getElementById('Detik');
+
+		var J = new Date().getHours()
+		var M = new Date().getMinutes()
+		var D = new Date().getSeconds()
+	
+		Jam.innerHTML = J;
+		Menit.innerHTML = M;
+		Detik.innerHTML = D;
+
+	}
+
+	var interval = setInterval(clock, 1000);
+</script>
+</body>
+</html>
